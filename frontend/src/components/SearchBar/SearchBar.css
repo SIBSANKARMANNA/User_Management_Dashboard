@@ -1,0 +1,31 @@
+.search-bar {
+  position: relative;
+  display: inline-flex;
+  /* justify-content: center; */
+  align-items: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.search-bar-clear {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.search-bar-clear:hover {
+  color: #333;
+}
