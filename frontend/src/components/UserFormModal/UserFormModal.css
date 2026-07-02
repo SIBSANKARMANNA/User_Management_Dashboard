@@ -1,0 +1,151 @@
+.user-form-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.form-field input {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.form-field input[aria-invalid='true'] {
+  border-color: #e5484d;
+}
+
+.field-error {
+  color: #e5484d;
+  font-size: 0.8rem;
+  margin: 0.3rem 0 0;
+}
+
+.form-submit-error {
+  color: #e5484d;
+  background-color: #fdecea;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.btn-cancel {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn-save {
+  background-color: #2f6fed;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+}
+
+.btn-save:disabled,
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}.user-form-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.form-field input {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.form-field input[aria-invalid='true'] {
+  border-color: #e5484d;
+}
+
+.field-error {
+  color: #e5484d;
+  font-size: 0.8rem;
+  margin: 0.3rem 0 0;
+}
+
+.form-submit-error {
+  color: #e5484d;
+  background-color: #fdecea;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.btn-cancel {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn-save {
+  background-color: #2f6fed;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+}
+
+.btn-save:disabled,
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
