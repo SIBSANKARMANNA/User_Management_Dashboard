@@ -16,16 +16,7 @@ interface UseUserFiltersResult {
   processedUsers: User[];
 }
 
-/**
- * Owns search/filter/sort state and derives the fully processed user
- * list from it via useMemo. All the actual matching/sorting logic lives
- * in utils/filterSortUsers.ts (pure functions, unit tested independently)
- * — this hook is state management + wiring on top of those.
- *
- * Colocating this state here (rather than in App) keeps App from having
- * to know about search/filter/sort internals at all — it just renders
- * `processedUsers` and passes the setters down to SearchBar/FilterPopup.
- */
+
 function useUserFilters(users: User[]): UseUserFiltersResult {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [filters, setFilters] = useState<FilterCriteria>(EMPTY_FILTERS);
@@ -36,11 +27,7 @@ function useUserFilters(users: User[]): UseUserFiltersResult {
     setFilters(EMPTY_FILTERS);
   }, []);
 
-  /**
-   * Clicking the same column header again flips direction (asc -> desc
-   * -> asc...); clicking a different column switches to that column,
-   * starting at ascending.
-   */
+ 
   const toggleSort = useCallback((field: SortableField) => {
     setSortField((currentField) => {
       if (currentField === field) {

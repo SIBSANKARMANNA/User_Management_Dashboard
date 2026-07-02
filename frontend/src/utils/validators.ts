@@ -1,18 +1,14 @@
 import type { UserFormData } from '../types/user';
 
-// Standard, reasonably strict email pattern: local@domain.tld
+
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Letters, spaces, hyphens, and apostrophes only — covers names like
-// "Anne-Marie" or "O'Brien" while rejecting numbers/symbols.
+
 const NAME_REGEX = /^[A-Za-z\s'-]+$/;
 
 export type FormErrors = Partial<Record<keyof UserFormData, string>>;
 
-/**
- * Validates a single required text field (firstName, lastName, department).
- * Returns an error message string, or undefined if valid.
- */
+
 function validateRequiredName(value: string, fieldLabel: string): string | undefined {
   const trimmed = value.trim();
 
@@ -25,10 +21,7 @@ function validateRequiredName(value: string, fieldLabel: string): string | undef
   return undefined;
 }
 
-/**
- * Validates an email address string.
- * Returns an error message string, or undefined if valid.
- */
+
 export function validateEmail(value: string): string | undefined {
   const trimmed = value.trim();
 
@@ -41,11 +34,7 @@ export function validateEmail(value: string): string | undefined {
   return undefined;
 }
 
-/**
- * Validates the full user form and returns a map of field -> error message.
- * An empty object means the form is valid.
- * Used by UserFormModal to block submission and show inline field errors.
- */
+
 export function validateUserForm(formData: UserFormData): FormErrors {
   const errors: FormErrors = {};
 
@@ -64,9 +53,7 @@ export function validateUserForm(formData: UserFormData): FormErrors {
   return errors;
 }
 
-/**
- * Convenience helper: true if the form has no validation errors.
- */
+
 export function isFormValid(formData: UserFormData): boolean {
   return Object.keys(validateUserForm(formData)).length === 0;
 }

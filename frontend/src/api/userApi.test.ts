@@ -4,8 +4,7 @@ import { getUsers, createUser, updateUser, deleteUser } from './userApi';
 import type { RawApiUser, UserFormData } from '../types/user';
 
 
-// Mock the shared httpClient module so no real network calls are made.
-// This lets us control exactly what each test scenario returns.
+
 jest.mock('./httpClient');
 const mockedHttpClient = httpClient as jest.Mocked<typeof httpClient>;
 

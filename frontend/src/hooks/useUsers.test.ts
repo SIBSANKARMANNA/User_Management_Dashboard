@@ -3,8 +3,7 @@ import useUsers from './useUsers';
 import { getUsers, createUser, updateUser, deleteUser } from '../api/userApi';
 import type { RawApiUser, UserFormData } from '../types/user';
 
-// Mock the whole API module so no real network calls happen.
-// Each test configures the specific function's behavior it needs.
+
 jest.mock('../api/userApi');
 const mockedGetUsers = getUsers as jest.MockedFunction<typeof getUsers>;
 const mockedCreateUser = createUser as jest.MockedFunction<typeof createUser>;

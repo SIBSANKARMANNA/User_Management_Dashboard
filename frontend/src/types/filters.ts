@@ -1,7 +1,4 @@
-/**
- * Per-field filter values for the Filter popup (Step 10).
- * All fields optional/empty-string means "no filter applied" for that field.
- */
+
 export interface FilterCriteria {
   firstName: string;
   lastName: string;

@@ -1,11 +1,7 @@
 import type { User } from '../types/user';
 import type { FilterCriteria, SortConfig } from '../types/filters';
 
-/**
- * Returns users where searchTerm appears (case-insensitively) in any of
- * firstName, lastName, email, or department. An empty/whitespace-only
- * searchTerm matches everything.
- */
+
 export function searchUsers(users: User[], searchTerm: string): User[] {
   const term = searchTerm.trim().toLowerCase();
   if (term === '') return users;
@@ -16,11 +12,6 @@ export function searchUsers(users: User[], searchTerm: string): User[] {
   );
 }
 
-/**
- * Returns users matching all provided per-field filters (AND logic).
- * Each field's filter value is matched as a case-insensitive substring;
- * an empty value for a field means "don't filter on this field".
- */
 export function filterUsers(users: User[], filters: FilterCriteria): User[] {
   const activeEntries = (Object.entries(filters) as [keyof FilterCriteria, string][])
     .filter(([, value]) => value.trim() !== '');
@@ -34,12 +25,7 @@ export function filterUsers(users: User[], filters: FilterCriteria): User[] {
   );
 }
 
-/**
- * Returns a new sorted array (does not mutate input) according to sortConfig.
- * A null key means "no sorting" and returns the array as-is (still a copy).
- * Numeric fields (id) sort numerically; text fields use localeCompare for
- * correct alphabetical ordering.
- */
+
 export function sortUsers(users: User[], sortConfig: SortConfig): User[] {
   const { key, direction } = sortConfig;
   if (!key) return [...users];
@@ -59,12 +45,7 @@ export function sortUsers(users: User[], sortConfig: SortConfig): User[] {
   return sorted;
 }
 
-/**
- * Composes search -> filter -> sort into a single pipeline.
- * Order matters for correctness but not for the final result set here,
- * since search/filter are independent AND conditions — sort is applied
- * last since it only reorders, never removes.
- */
+
 export function processUsers(
   users: User[],
   searchTerm: string,
