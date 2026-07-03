@@ -2,8 +2,8 @@
 
 A React + TypeScript CRUD dashboard for viewing, adding, editing, and deleting users, built against [JSONPlaceholder](https://jsonplaceholder.typicode.com)'s `/users` endpoint.
 
-**Live demo:** _[add your deployment link here]_
-**Repo:** _[add your GitHub repo link here]_
+**Live demo:** _https://user-management-dashboard-ui.netlify.app/_
+**Repo:** _https://github.com/SIBSANKARMANNA/User_Management_Dashboard_
 
 ---
 
