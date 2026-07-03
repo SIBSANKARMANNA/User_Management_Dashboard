@@ -1,0 +1,43 @@
+.delete-confirm-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+.delete-confirm-message {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.delete-confirm-error {
+  color: #e5484d;
+  background-color: #fdecea;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+.delete-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.btn-confirm-delete {
+  background-color: #e5484d;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+}
+
+.btn-confirm-delete:disabled,
+.delete-confirm-actions .btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

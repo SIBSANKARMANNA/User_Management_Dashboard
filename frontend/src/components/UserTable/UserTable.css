@@ -117,5 +117,8 @@
 
   .user-table-actions {
     justify-content: flex-end;
+    flex-direction: column;
   }
+
+  
 }
