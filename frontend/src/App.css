@@ -18,6 +18,10 @@
 }
 
 .app-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -66,4 +70,18 @@
   .app-container {
     padding: 1rem;
   }
+}
+
+.btn-filter {
+  padding: 10px 18px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-filter:hover {
+  background-color: #1d4ed8;
 }
